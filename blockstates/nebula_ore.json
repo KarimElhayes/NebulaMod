@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "nebulamod:block/nebula_ore" }
+  }
+}
