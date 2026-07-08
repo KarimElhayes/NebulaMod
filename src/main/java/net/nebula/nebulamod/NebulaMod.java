@@ -26,9 +26,8 @@ public class NebulaMod implements ModInitializer {
     };
 
     public static final Item NEBULA_SWORD = new SwordItem(NEBULA_TOOL_MATERIAL, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final Item NEBULA_PICKAXE = new PickaxeItem(NEBULA_TOOL_MATERIAL, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
-    public static final Item NEBULA_SHOVEL = new ShovelItem(NEBULA_TOOL_MATERIAL, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
-    
+    public static final Item NEBULA_PICKAXE = new ModPickaxeItem(NEBULA_TOOL_MATERIAL, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
+    public static final Item NEBULA_SHOVEL = new ModShovelItem(NEBULA_TOOL_MATERIAL, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static final Item NEBULA_AXE = new ModAxeItem(NEBULA_TOOL_MATERIAL, 6.0F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static final Item NEBULA_HOE = new ModHoeItem(NEBULA_TOOL_MATERIAL, -3, 0.0F, new Item.Settings().group(ItemGroup.TOOLS));
 
@@ -39,6 +38,18 @@ public class NebulaMod implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nebula_shovel"), NEBULA_SHOVEL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nebula_axe"), NEBULA_AXE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nebula_hoe"), NEBULA_HOE);
+    }
+
+    public static class ModPickaxeItem extends PickaxeItem {
+        public ModPickaxeItem(ToolMaterial material, int attackDamage, float attackSpeed, Item.Settings settings) {
+            super(material, attackDamage, attackSpeed, settings);
+        }
+    }
+
+    public static class ModShovelItem extends ShovelItem {
+        public ModShovelItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings) {
+            super(material, attackDamage, attackSpeed, settings);
+        }
     }
 
     public static class ModAxeItem extends AxeItem {
