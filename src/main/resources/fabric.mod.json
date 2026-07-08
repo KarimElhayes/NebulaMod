@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "nebula",
+  "version": "1.0.0",
+  "name": "Nebula Mod",
+  "description": "Nebula Mod supporting Minecraft 1.16 to 1.16.5",
+  "authors": [
+    "Kemo"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/nebula/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.nebula.nebulamod.NebulaMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.24",
+    "minecraft": ">=1.16 <=1.16.5",
+    "java": ">=8"
+  }
+}
